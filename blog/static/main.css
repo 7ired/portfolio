@@ -82,3 +82,7 @@ body {
   .form-group {
     margin-bottom: 2px;
   }
+
+  .form-group textarea {
+    height: 200px;
+  }
