@@ -86,3 +86,7 @@ body {
   .form-group textarea {
     height: 200px;
   }
+
+  .mr-2 a {
+    text-decoration: none;
+  }
