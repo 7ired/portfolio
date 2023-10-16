@@ -2,7 +2,7 @@
 {% block content %}
     <div class="media-body">
         <div class="article-metadata">
-            <h1>Hey you! You're finally awake.</h1>
+            <h1 style="font-size:2vw">Hey you! You're finally awake.</h1>
         </div>
         <p>
             My name is Eryk, nice to meet you at last. I've been willing to talk to you.<br>
@@ -18,25 +18,23 @@
             Besides that, there are a few things I love to do!<br>
             <b style="font-size:2vw">Snowboarding</b><br>
             I started skiing when I was about 4 years old. Ten years later I made a transition to snowboarding and I've loved it ever since. I also love mountains and hiking outside of winter season.<br>
+            <b style="font-size:2vw">Powerlifting</b><br>
+            It's a niche sport where the goal is to lift as much weight as possible in 3 lifts - squat, bench press and deadlift.
+            I started lifting weights shortly before covid-19 pandemics hit the world. It was supposed to be a therapeutical activity,
+            which I ended up enjoying so much, I got into powerlifting. I actively compete in powerlifting competitions. My best lifts are 180 kg squat, 115 kg bench press and 180 kg deadlift.<br> 
+            <b style="font-size:2vw">Cooking</b><br>
+            Who does not like to eat good food?<br>
             <div class="row">
                 <div class="col-md-4">
                     <img src="{{ url_for('static', filename='aboutme_pics/' + 'snow1.jpg') }}", alt="Orelle Val-Thorens" width="300" height="300" class="img-fluid">
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ url_for('static', filename='aboutme_pics/' + 'snow2.jpg') }}", alt="Orelle Val-Thorens 2" width="300" height="300" class="img-fluid">
+                    <img src="{{ url_for('static', filename='aboutme_pics/' + 'me.jpg') }}", alt="Graduation day" width="300" height="300" class="img-fluid">
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ url_for('static', filename='aboutme_pics/' + 'snow3.jpg') }}", alt="Solden" width="300" height="300" class="img-fluid">
+                    <img src="{{ url_for('static', filename='aboutme_pics/' + 'food1.jpg') }}", alt="Chicken udon" width="300" height="300" class="img-fluid">
                 </div>
             </div>
-            <br>
-            <b style="font-size:2vw">Powerlifting</b><br>
-            It's a niche sport where the goal is to lift as much weight as possible in 3 lifts - squat, bench press and deadlift.<br>
-            I started lifting weights shortly before covid-19 pandemics hit the world. It was supposed to be a therapeutical activity,<br>
-            which I ended up enjoying so much, I got into powerlifting. I actively compete in powerlifting competitions. My best lifts are 180 kg squat, 115 kg bench press and 180 kg deadlift.<br> 
-            <b style="font-size:2vw">Cooking</b><br>
-            Who does not like to eat good food?<br>
-            <br>
              
         </p>
     </div>
