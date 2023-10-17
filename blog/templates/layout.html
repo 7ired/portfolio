@@ -50,7 +50,11 @@
      </header>
      <main role="main" class="container">
        <div class="row">
-         <div class="col-md-8">
+         {% if request.path == '/home' %}
+          <div class="col-md-8">
+         {% else %}
+          <div class="col-md-10">
+         {% endif %}
            {% with messages = get_flashed_messages(with_categories=true) %}
              {% if messages %}
                {% for category, message in messages %}
@@ -62,6 +66,7 @@
            {% endwith %}
            {% block content %}{% endblock %}
          </div>
+         {% if request.path == '/home' %}
          <div class="col-md-4">
            <div class="content-section">
              <h3>Something</h3>
@@ -78,6 +83,7 @@
              </p>
            </div>
          </div>
+         {% endif %}
        </div>
      </main>
  
