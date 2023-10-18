@@ -1,5 +1,6 @@
 from flask import render_template, request, Blueprint
 from blog.models import Post
+from math import ceil
 
 
 projects = Blueprint('projects', __name__)
@@ -7,9 +8,7 @@ projects = Blueprint('projects', __name__)
 projects_data = [
 	{
 		'title': 'Monte Carlo Stock Simulation',
-		'description': """
-Stock prices follow a random walk, which makes them unpredictable; we can only apply different strategies and try to forecast the returns. However, there's a simple tool to simulate how a portfolio could behave throughout a certain timeframe. In this short project, I've done a Monte Carlo Simulation of the S&P 500 index as well as a calculation of Value at Risk and Conditional Value at Risk statistics.
-""",
+		'description': 'Stock prices follow a random walk, which makes them unpredictable; we can only apply different strategies and try to forecast the returns. However, there is a simple tool to simulate how a portfolio could behave throughout a certain timeframe. Monte Carlo Simulation of the S&P 500 index as well as a calculation of Value at Risk and Conditional Value at Risk statistics.',
 		'image': 'montecarlo.jpeg',
 		'id': 'montecarlo'
 	},
@@ -23,16 +22,40 @@ The analysis was based on average daily market electricity prices. Prior to June
 		'id': 'electricity'
 	},
 	{
-		'title': 'test',
-		'description': 'test',
-		'image': '#',
-		'id': 'test1'
+		'title': 'Markov Chains Stock Movements Prediction',
+		'description': 'The Markov Chains Stock Movements Prediction project is designed to forecast future stock price movements using the principles of Markov Chains. Leveraging historical stock price data, this project employs a probabilistic model to make predictions about the direction of stock movements over a defined period.',
+		'image': 'chains.png',
+		'id': 'chains'
 	},
 	{
-		'title': 'test2',
-		'description': 'test2',
-		'image': '#',
-		'id': 'test2'
+		'title': 'LSTM Neural Network Stock Prediction with TensorFlow',
+		'description': 'The LSTM Neural Network Stock Prediction project utilizes TensorFlow, a powerful machine learning library, to develop a predictive model for forecasting stock prices. Specifically, it employs Long Short-Term Memory (LSTM) networks, a type of recurrent neural network (RNN), known for their ability to capture sequential patterns in time series data. Project is based on S&P500 index.',
+		'image': 'rnn.png',
+		'id': 'rnn'
+	},
+	{
+		'title': 'Twitch.tv Data Streaming and Database Integration Project',
+		'description': 'The Twitch.tv Data Streaming and Database Integration project is a comprehensive endeavor focused on gathering real-time data from the popular streaming platform, Twitch.tv. Leveraging APIs provided by Twitch, this project aims to collect, process, and store a wide array of data related to streamers, channels, viewership, and engagement metrics.',
+		'image': 'ttv.png',
+		'id': 'ttv'
+	},
+	{
+		'title': 'Data Science London Meetup - Sklearn Fun',
+		'description': 'Data Science London is hosting a meetup on Scikit-learn.  This competition is a practice ground for trying, sharing, and creating examples of sklearns classification abilities (if this turns in to something useful, we can follow it up with regression, or more complex classification problems).',
+		'image': 'sklearn.jpg',
+		'id': 'sklearn'
+	},
+	{
+		'title': 'Berlin Airbnb Price Predictions',
+		'description': 'The Berlin Airbnb Price Prediction estimates the nightly rental prices of listings on the Airbnb platform in Berlin, Germany. This project aims to offer hosts and travelers valuable insights into the expected costs of accommodations in various neighborhoods and property types across Berlin. This is my first machine learning project ever done.',
+		'image': 'berlin.jpg',
+		'id': 'berlin'
+	},
+	{
+		'title': 'LeMans 24h Race Winners',
+		'description': 'Web Scraping, Data Cleaning and Feature Engineering raw data about the LeMans 24h Race Winners. Aim of this task was to get a clean dataset to run visualizations.',
+		'image': 'lemans.jpg',
+		'id': 'lemans'
 	},
 
 	# Add more projects as needed
@@ -40,11 +63,18 @@ The analysis was based on average daily market electricity prices. Prior to June
 
 @projects.route("/projects")
 def projects_page():
-	page = request.args.get('page', 1, type=int)
-	start = (page - 1) * 3
-	end = start + 3
-	paginated_projects = projects_data[start:end]
-	return render_template('projects/projects.html', title='Projects', projects=paginated_projects)
+    page = request.args.get('page', 1, type=int)
+    projects_per_page = 3
+    total_projects = len(projects_data)
+    total_pages = ceil(total_projects / projects_per_page)
+
+    start = (page - 1) * projects_per_page
+    end = min(start + projects_per_page, total_projects)
+    
+    paginated_projects = projects_data[start:end]
+    
+    return render_template('projects/projects.html', title='Projects', projects=paginated_projects, current_page=page, total_pages=total_pages)
+
 
 @projects.route('/projects/<string:id>')
 def project_details(id):
