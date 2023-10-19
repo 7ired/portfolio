@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="media-body">
+        <div class="article-metadata">
+            <h1>Polish Electricity Market Statistical Analysis</h1>
+        </div>
+        {% include 'projects/notebooks/getting_data.html' %}
+        {% include 'projects/notebooks/energy_prices.html' %}
+    </div>
+{% endblock content %}
+
