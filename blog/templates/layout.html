@@ -11,9 +11,9 @@
      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
      {% if title %}
-         <title>Eryks Blog - {{ title }}</title>
+         <title>Eryk Witkowski - {{ title }}</title>
      {% else %}
-         <title>Eryks Blog</title>
+         <title>Eryk Witkowski | Data Scientist</title>
      {% endif %}
  </head>
  <body>
@@ -27,12 +27,10 @@
            <div class="collapse navbar-collapse" id="navbarToggle">
              <div class="navbar-nav mr-auto">
                <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
-             </div>
-            <div class="collapse navbar-collapse" id="navbarToggle">
-              <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="{{ url_for('projects.projects_page') }}">Projects</a>
+               <a class="nav-item nav-link" href="{{ url_for('projects.projects_page') }}">Projects</a>
+               <a class="nav-item nav-link" href="{{ url_for('main.blog') }}">Blog</a>
               </div>
-            </div>
+             </div>
              <!-- Navbar Right Side -->
              <div class="navbar-nav ml-auto">
                {% if current_user.is_authenticated %}
@@ -69,17 +67,22 @@
          {% if request.path == '/home' %}
          <div class="col-md-4">
            <div class="content-section">
-             <h3>Something</h3>
-             <p class='text-muted'>Check out my something! Idk yet.
+             <h3>My Socials</h3>
+             <p class='text-muted'>Feel free to connect!
                <ul class="list-group">
                  <li class="list-group-item">
-                  <a class="nav-link" href="#" style="color:black">Sample text 1</a></li>
-                 <li class="list-group-item">
-                  <a class="nav-link" href="#" style="color:black">Sample text 2</a></li>
-                 <li class="list-group-item">
-                  <a class="nav-link" href="#" style="color:black">Sample text 3</a></li>
-                 <li class="list-group-item ">etc</li>
-               </ul>
+                   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" />
+                    <a href="https://www.linkedin.com/in/erykwitkowski/" style="color:black" target="_blank">LinkedIn</a>
+                  </li>
+                  <li class="list-group-item">
+                    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" />
+                    <a href="https://github.com/7ired" style="color:black" target="_blank">GitHub</a>
+                  </li>
+                  <li class="list-group-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="32" height="32" />
+                    <a href="mailto:erykwitkowski2@gmail.com" style="color:black" target="_blank">Hire me! or send an email 😁</a>
+                  </li>
+                </ul>
              </p>
            </div>
          </div>
