@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="media-body">
+        <div class="article-metadata">
+            <h1 style="font-size:2vw">About the page</h1>
+        </div>
+        <p>
+            This page has been written completely in Python, Flask.
+            <br>
+            Purpose of this project was creation of my personal portfolio website, where I would display my Python and Data Science skills.
+            <br>
+            <br>
+            Here I would also like to express my gratitude to Corey Schafer, who taught me everything about Flask. Many thanks, Corey.
+            <a href="https://www.youtube.com/@coreyms">Corey's YouTube<a>.
+            <br>
+            <br>
+            If you have any questions, feel free to write me an email. Also, remember that everything is available on my GitHub! (Links on the home page!) Well, maybe except for the database, where I store my user information :)
+        </p>
+        <body>
+            <pre>
+                This is a project tree of the Flask application.
+                ├── README.md
+                ├── blog
+                │   ├── __init__.py
+                │   ├── config.py
+                │   ├── errors
+                │   │   ├── __init__.py
+                │   │   └── handlers.py
+                │   ├── main
+                │   │   ├── __init__.py
+                │   │   └── routes.py
+                │   ├── models.py
+                │   ├── posts
+                │   │   ├── __init__.py
+                │   │   ├── forms.py
+                │   │   └── routes.py
+                │   ├── projects
+                │   │   ├── __init__.py
+                │   │   └── routes.py
+                │   ├── static
+                │   │   ├── aboutme_pics
+                │   │   │   ├── food1.JPG
+                │   │   │   ├── me.JPG
+                │   │   │   ├── snow1.JPG
+                │   │   │   ├── snow2.JPG
+                │   │   │   └── snow3.jpg
+                │   │   ├── main.css
+                │   │   ├── profile_pics
+                │   │   │   ├── 212911f44e2a2f7f.jpeg
+                │   │   │   └── default.jpg
+                │   │   └── projects_pics
+                │   │       ├── berlin.jpg
+                │   │       ├── chains.png
+                │   │       ├── electricity.jpg
+                │   │       ├── lemans.jpg
+                │   │       ├── montecarlo.jpeg
+                │   │       ├── rnn.png
+                │   │       ├── sklearn.jpg
+                │   │       ├── spaceship.jpg
+                │   │       └── ttv.png
+                │   ├── templates
+                │   │   ├── about.html
+                │   │   ├── account.html
+                │   │   ├── blog.html
+                │   │   ├── create_post.html
+                │   │   ├── documentation.html
+                │   │   ├── errors
+                │   │   │   ├── 403.html
+                │   │   │   ├── 404.html
+                │   │   │   └── 500.html
+                │   │   ├── home.html
+                │   │   ├── layout.html
+                │   │   ├── login.html
+                │   │   ├── post.html
+                │   │   ├── projects
+                │   │   │   ├── berlin.html
+                │   │   │   ├── chains.html
+                │   │   │   ├── electricity.html
+                │   │   │   ├── lemans.html
+                │   │   │   ├── montecarlo.html
+                │   │   │   ├── notebooks
+                │   │   │   │   ├── MC.html
+                │   │   │   │   ├── RNN.html
+                │   │   │   │   ├── api_db.html
+                │   │   │   │   ├── berlin.html
+                │   │   │   │   ├── dash.html
+                │   │   │   │   ├── energy_prices.html
+                │   │   │   │   ├── getting_data.html
+                │   │   │   │   ├── monte_carlo.html
+                │   │   │   │   ├── sklearn_fun.html
+                │   │   │   │   └── spaceship.html
+                │   │   │   ├── projects.html
+                │   │   │   ├── rnn.html
+                │   │   │   ├── sklearn.html
+                │   │   │   ├── spaceship.html
+                │   │   │   └── ttv.html
+                │   │   ├── register.html
+                │   │   └── user_posts.html
+                │   └── users
+                │       ├── __init__.py
+                │       ├── forms.py
+                │       ├── routes.py
+                │       └── utils.py
+                ├── instance
+                │   └── site.db
+                ├── requirements.txt
+                └── run.py
+            </pre>
+        </body>
+    </div>
+{% endblock content %}

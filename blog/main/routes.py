@@ -18,3 +18,7 @@ def about():
 @main.route("/blog")
 def blog():
 	return render_template('blog.html', title='Blog')
+
+@main.route("/documentation")
+def documentation():
+	return render_template('documentation.html', title='Documentation')
