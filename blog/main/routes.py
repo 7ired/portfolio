@@ -1,10 +1,13 @@
-from flask import render_template, request, Blueprint
+from flask import render_template, request, Blueprint, redirect, url_for
 from blog.models import Post
 
 
 main = Blueprint('main', __name__)
 
 @main.route("/")
+def redirect_home():
+	return redirect(url_for('main.home'))
+
 @main.route("/home")
 def home():
 	page = request.args.get('page', default=1, type=int)

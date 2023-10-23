@@ -3,7 +3,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 from blog import db, bcrypt
 from blog.models import User, Post
 from blog.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, ChangePasswordForm
-from blog.users.utils import save_picture, send_reset_email
+from blog.users.utils import save_picture
 
 users = Blueprint('users', __name__)
 
