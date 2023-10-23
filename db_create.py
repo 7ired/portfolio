@@ -1,3 +1,6 @@
-from blog import db
+from blog import create_app, db
 
-db.create_all()
+app=create_app()
+
+with app.app_context:
+    db.create_all()
