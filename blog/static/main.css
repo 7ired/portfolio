@@ -7,6 +7,12 @@ body {
   .centered {
     text-align: center;
   }
+
+  .img-centered {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+  }
   
   h1, h2, h3, h4, h5, h6 {
     color: #444444;

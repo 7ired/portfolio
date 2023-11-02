@@ -88,6 +88,11 @@
            </div>
          </div>
          {% endif %}
+         {% if request.path == '/blog' %}
+            <img src="{{ url_for('static', filename='blog_pics/' + 'Porsche_Wappen.png') }}" 
+            width="50%" 
+            style="padding-left: 30%;">
+         {% endif %}
        </div>
      </main>
  
