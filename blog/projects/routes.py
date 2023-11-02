@@ -7,6 +7,13 @@ projects = Blueprint('projects', __name__)
 
 projects_data = [
 	{
+		'title': 'Porsche Series 1 - Image Files Processing',
+		'description': 'Data Engineering project. The goal is to process image files - create a DataFrame with certain information about the images, and then sorting them into subfolders. This data project has been used as a take-home assignment in the recruitment process for the data science positions at Amazon.',
+		'image': 'images.png',
+		'id': 'images',
+		'tags': 'Image Processing, Data Engineering'
+	},
+ 	{
 		'title': 'Monte Carlo Stock Simulation',
 		'description': 'Stock prices follow a random walk, which makes them unpredictable; we can only apply different strategies and try to forecast the returns. However, there is a simple tool to simulate how a portfolio could behave throughout a certain timeframe. Monte Carlo Simulation of the S&P 500 index as well as a calculation of Value at Risk and Conditional Value at Risk statistics.',
 		'image': 'montecarlo.jpeg',
