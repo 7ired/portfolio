@@ -7,6 +7,13 @@ projects = Blueprint('projects', __name__)
 
 projects_data = [
 	{
+		'title': 'Porsche Series 2 - Data Visualization',
+		'description': 'Data Visualization project, which is a Tableau Dashboard of the Porsche data I have collected from automarket websites. It required thorough data cleaning, since the scraped data was very dirty, especially the titles (car models) were very inconsistent.',
+		'image': 'dashboard.png',
+		'id': 'dashboard',
+		'tags': 'Data Gathering, Data Cleaning, Web Scraping, Beautiful Soup, Tableau'
+	},
+	{
 		'title': 'Porsche Series 1 - Image Files Processing',
 		'description': 'Data Engineering project. The goal is to process image files - create a DataFrame with certain information about the images, and then sorting them into subfolders. This data project has been used as a take-home assignment in the recruitment process for the data science positions at Amazon.',
 		'image': 'images.png',
