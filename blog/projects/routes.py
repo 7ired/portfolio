@@ -6,6 +6,13 @@ from math import ceil
 projects = Blueprint('projects', __name__)
 
 projects_data = [
+    	{
+		'title': 'Tableau Further Practice',
+		'description': 'Playing with Tableau. Made a Sales Dashboard for an intercontinental chain of stores.',
+		'image': 'store.png',
+		'id': 'sales_dashboard',
+		'tags': 'Data Visualization, Tableau'
+	},
 	{
 		'title': 'Porsche Series 2 - Data Visualization',
 		'description': 'Data Visualization project, which is a Tableau Dashboard of the Porsche data I have collected from automarket websites. It required thorough data cleaning, since the scraped data was very dirty, especially the titles (car models) were very inconsistent.',
